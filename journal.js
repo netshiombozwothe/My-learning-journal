@@ -11,6 +11,7 @@
         import { journalList } from "./data.js"
 
         document.getElementById('section-three').innerHTML = renderBlogs()
+    
         function renderBlogs(){
             const displayBlogs = journalList.map(function(journal){
                 return`
@@ -25,4 +26,8 @@
 
             return displayBlogs
         }
+
+        let displayDate = document.getElementById('date')
+        const dateSnapShot = new Date()
+        displayDate.textContent = 'Copyright ©' + dateSnapShot.getFullYear()
 
