@@ -15,12 +15,14 @@
         function renderBlogs(){
             const displayBlogs = journalList.map(function(journal){
                 return`
+                <div class="section-three-grid">
             <img class="section-three-img" src="${journal.image}" alt="" width="100%">
 
             <div class="section-description"></div>
             <p class="today-date">${journal.date}</p>
             <h2 class="section-three-h2">${journal.title}</h2>
             <p class="section-three-p">${journal.description}</p>
+            </div>
             `
             }).join('')
 
